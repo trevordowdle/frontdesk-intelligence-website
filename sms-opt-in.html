@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How patients opt in to missed-call SMS follow-up from participating clinics using FrontDesk Intelligence.">
+  <title>SMS Opt-In Methodology — FrontDesk Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">FD</span>
+        <span>FrontDesk Intelligence</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="sms-opt-in.html" aria-current="page">SMS Opt-In</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>SMS opt-in methodology</h1>
+        <p>Public documentation of how patients consent to receive missed-call follow-up text messages from participating clinics that use FrontDesk Intelligence.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="container prose">
+        <h2>Overview</h2>
+        <p>
+          <strong>Use case:</strong> A patient calls a participating clinic’s published phone number. If the call is not answered by staff, the caller may receive an automated follow-up SMS to the same phone number they called from. The patient may then reply to continue the conversation by text.
+        </p>
+        <p>
+          This program is <strong>transactional customer care</strong> — not marketing broadcast messaging. We do not send messages to phone numbers that have not placed an inbound call to the clinic (except replies within an existing thread started by this flow).
+        </p>
+
+        <h2>Who receives messages</h2>
+        <p>Patients and prospective patients who call a participating clinic’s advertised phone number from the phone number we text.</p>
+
+        <h2>How consent is obtained</h2>
+        <ol>
+          <li><strong>The consumer initiates contact</strong> by dialing the clinic’s published phone number (website, Google Business Profile, signage, etc.).</li>
+          <li>The call is <strong>not completed with staff</strong> per the clinic’s telephony setup (for example: no answer, busy, or a short call that ends without a substantive conversation).</li>
+          <li><strong>Shortly after</strong> that call (target: within approximately 30 seconds), the caller receives <strong>one automated SMS</strong> at the <strong>same number they called from</strong>, from the clinic’s dedicated messaging number.</li>
+          <li>The <strong>first SMS</strong> includes:
+            <ul>
+              <li>Clinic name (identifies sender)</li>
+              <li>Statement that the clinic missed their call</li>
+              <li>Purpose: scheduling and questions related to their inquiry</li>
+              <li>Instruction to reply to continue by text</li>
+              <li>Opt-out: Reply <strong>STOP</strong> to unsubscribe; <strong>HELP</strong> for help; message and data rates may apply</li>
+            </ul>
+          </li>
+          <li><strong>Further messages</strong> occur only when:
+            <ul>
+              <li>the consumer replies to that thread,</li>
+              <li>clinic staff respond in the same thread to assist the consumer, or</li>
+              <li>a configured service reminder tied to that open inquiry (for example, a patient nudge if no reply) — not broadcast marketing.</li>
+            </ul>
+          </li>
+          <li><strong>Opt-out:</strong> Consumers may reply <strong>STOP</strong> (and other standard keywords) to end messages. Opt-out is honored promptly and persisted in our systems.</li>
+        </ol>
+
+        <h2>Sample first message</h2>
+        <p style="background:var(--color-accent);padding:1rem 1.25rem;border-radius:8px;color:var(--color-text);">
+          Hi — we missed your call at [Clinic Name]. Reply here and we'll help with scheduling or questions. Msg &amp; data rates may apply. Reply STOP to opt out.
+        </p>
+
+        <h2>Message types</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Allowed</th>
+              <th>Not allowed via this flow</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Missed-call follow-up</td>
+              <td>Cold outreach or purchased lists</td>
+            </tr>
+            <tr>
+              <td>Scheduling and service questions</td>
+              <td>Unrelated promotional blasts</td>
+            </tr>
+            <tr>
+              <td>Staff replies in an existing thread</td>
+              <td>Messages to numbers that never called</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Why this is not a web checkbox opt-in</h2>
+        <p>For this flow, opt-in is <strong>call-initiated contact</strong> plus <strong>clear disclosure in the first SMS</strong>. Separate written consent may still be required for marketing programs or certain jurisdictions.</p>
+
+        <h2>One-sentence summary</h2>
+        <p><em>Consumers opt in by calling the clinic’s published phone number; if the call is not answered, they receive a follow-up SMS to the calling number identifying the clinic, explaining we missed their call, and offering help by reply, with STOP to opt out.</em></p>
+
+        <h2>Frequency</h2>
+        <p>Message frequency varies based on the patient’s inquiry. Typically one initial automated message per missed call, plus replies in the same conversation thread. Service reminders, if enabled, are limited to the open inquiry.</p>
+
+        <h2>Help and support</h2>
+        <p>Reply <strong>HELP</strong> to any message for clinic contact information and opt-out instructions, or contact us at <a href="mailto:trevordowdle@gmail.com">trevordowdle@gmail.com</a>.</p>
+
+        <h2>Related policies</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="contact.html">Contact information</a></li>
+        </ul>
+
+        <p><small>Last updated: June 2026</small></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="index.html" style="color:#fff;margin-bottom:0.75rem;">
+            <span class="logo-mark" aria-hidden="true">FD</span>
+            <span>FrontDesk Intelligence</span>
+          </a>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sms-opt-in.html">SMS Opt-In Methodology</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="margin:0;">&copy; <span id="year"></span> FrontDesk Intelligence. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
