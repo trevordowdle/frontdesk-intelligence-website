@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demo SMS opt-in form showing how callers agree to receive text messages from FrontDesk Intelligence.">
+  <title>SMS Sign-Up Form (Demo) — FrontDesk Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">FD</span>
+        <span>FrontDesk Intelligence</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="sms-opt-in.html">SMS Opt-In</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>SMS text message sign-up</h1>
+        <p>
+          This page shows the <strong>web form opt-in</strong> used by participating clinics. Callers who provide a mobile number must check the box below to explicitly agree to receive SMS text messages.
+        </p>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="container">
+        <div class="prose" style="max-width:640px;margin:0 auto;">
+          <p style="margin-top:0;color:var(--color-text-muted);">
+            <strong>Program:</strong> FrontDesk Intelligence — missed-call SMS follow-up for clinics<br>
+            <strong>Sender:</strong> Clinic toll-free messaging number (e.g. (833) 657-4305)
+          </p>
+
+          <form class="opt-in-form-mock" action="#" method="post" aria-label="SMS opt-in demonstration form">
+            <div>
+              <label class="field-label" for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" readonly>
+            </div>
+            <div>
+              <label class="field-label" for="phone">Mobile phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(801) 555-0123" readonly>
+            </div>
+
+            <div class="checkbox-consent">
+              <input type="checkbox" id="sms-consent" name="sms_consent" checked disabled aria-describedby="consent-text">
+              <label for="sms-consent" id="consent-text">
+                <strong>I agree to receive SMS text messages from FrontDesk Intelligence</strong> (on behalf of the clinic I contacted) about my inquiry, including missed-call follow-up texts, scheduling assistance, and staff replies. Message frequency varies. <strong>Message and data rates may apply.</strong> Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help. Consent is not required to purchase services. See our <a href="sms-opt-in.html">SMS Opt-In &amp; Consent</a> page and <a href="privacy.html">Privacy Policy</a>.
+              </label>
+            </div>
+
+            <button type="button" class="btn-demo" disabled>Submit — demo form for verification</button>
+          </form>
+
+          <p style="margin-top:1.5rem;font-size:0.92rem;color:var(--color-text-muted);">
+            This is a static demonstration form for toll-free verification review. Production clinic forms include the same checkbox language before any SMS is sent.
+          </p>
+
+          <p><a href="sms-opt-in.html">← Back to full SMS opt-in documentation</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p style="margin:0;">&copy; <span id="year"></span> FrontDesk Intelligence. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

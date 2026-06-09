@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="How patients explicitly consent to receive SMS text messages for missed-call follow-up from participating clinics using FrontDesk Intelligence.">
+  <meta name="description" content="Visual SMS opt-in workflow: web form checkbox, pre-call disclosure, and text-message consent for FrontDesk Intelligence.">
   <title>SMS Text Message Opt-In &amp; Consent — FrontDesk Intelligence</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
       <div class="container">
         <h1>SMS text message opt-in &amp; consent</h1>
         <p>
-          This page documents how patients and callers <strong>explicitly consent to receive SMS (text) messages</strong> from participating clinics that use FrontDesk Intelligence. This consent is separate from our Privacy Policy or Terms of Service.
+          This page shows <strong>exactly how end users agree to receive SMS text messages</strong> from FrontDesk Intelligence and participating clinics. SMS consent is collected separately from our Privacy Policy and Terms of Service.
         </p>
       </div>
     </section>
@@ -40,102 +40,162 @@
     <section style="padding-top:0;">
       <div class="container prose">
         <div class="consent-box">
-          <h2>SMS consent statement</h2>
+          <h2>Required SMS disclosures (shown at every opt-in touchpoint)</h2>
           <p class="consent-lead">
-            By calling a participating clinic’s published phone number from your mobile phone, you consent to receive SMS text messages from that clinic at the same phone number you called from, if your call is not answered by staff.
-          </p>
-          <p>
-            You agree to receive text messages about your inquiry, including missed-call follow-up texts, scheduling assistance, appointment-related questions, and staff replies in the same conversation thread. Message frequency varies based on your inquiry. <strong>Message and data rates may apply.</strong>
-          </p>
-          <p>
-            You may opt out at any time by replying <strong>STOP</strong>. For help, reply <strong>HELP</strong> or contact the clinic directly. Consent to receive SMS messages is not required as a condition of purchasing any goods or services.
+            <strong>Program name:</strong> FrontDesk Intelligence — missed-call SMS follow-up<br>
+            <strong>Messages you will receive:</strong> SMS text messages about your inquiry, including missed-call follow-up, scheduling help, and staff replies<br>
+            <strong>Frequency:</strong> Message frequency varies (typically one initial text per missed call, plus replies in the same thread)<br>
+            <strong>Cost:</strong> Message and data rates may apply<br>
+            <strong>Opt-out:</strong> Reply STOP to cancel SMS messages. Reply HELP for help.<br>
+            <strong>Support:</strong> <a href="mailto:trevordowdle@gmail.com">trevordowdle@gmail.com</a> or (801) 895-2696
           </p>
         </div>
 
-        <h2>How SMS opt-in works (step by step)</h2>
+        <h2>Opt-in touchpoint 1 — Web form with SMS consent checkbox</h2>
         <p>
-          Consent is obtained through a <strong>call-initiated opt-in flow</strong>. There is no web checkbox. The caller takes a clear action — placing a phone call — and then receives an SMS with full disclosure before any ongoing text conversation.
+          When a patient provides their mobile number on a clinic contact form, they must <strong>check a box to explicitly agree to receive SMS text messages</strong> before any texts are sent. This is separate from accepting the Privacy Policy.
+        </p>
+        <p>
+          <a class="btn btn-primary touchpoint-link" href="sms-signup.html">View live demo: SMS sign-up form →</a>
         </p>
 
+        <div class="mockup-panel" style="margin:1.5rem 0 2.5rem;">
+          <div class="mockup-panel-header">Screenshot equivalent — web form opt-in language</div>
+          <div class="mockup-panel-body">
+            <div class="checkbox-consent">
+              <input type="checkbox" checked disabled aria-hidden="true">
+              <label>
+                <strong>I agree to receive SMS text messages from FrontDesk Intelligence</strong> (on behalf of the clinic I contacted) about my inquiry, including missed-call follow-up texts, scheduling assistance, and staff replies. Message frequency varies. <strong>Message and data rates may apply.</strong> Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help. Consent is not required to purchase services.
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <h2>Opt-in touchpoint 2 — Pre-call disclosure (before dialing)</h2>
+        <p>
+          Where a clinic’s phone number is published (website, Google Business Profile, etc.), the following SMS disclosure is displayed <strong>next to the phone number</strong> so callers know they may receive text messages if their call is not answered:
+        </p>
+
+        <div class="mockup-panel" style="margin:1.5rem 0 2.5rem;">
+          <div class="mockup-panel-header">Screenshot equivalent — disclosure near clinic phone number</div>
+          <div class="mockup-panel-body">
+            <p style="margin:0 0 0.5rem;font-weight:700;">Call us: (833) 657-4305</p>
+            <div class="disclosure-near-phone">
+              <strong>SMS text message notice</strong>
+              If your call is not answered, you may receive an SMS text message at the number you call from. By calling this number from your mobile phone, you agree to receive SMS text messages from FrontDesk Intelligence about your inquiry. Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help.
+            </div>
+            <p style="margin:0.75rem 0 0;font-size:0.9rem;color:var(--color-text-muted);">
+              See also: <a href="contact.html">Contact page with live disclosure</a>
+            </p>
+          </div>
+        </div>
+
+        <h2>Opt-in touchpoint 3 — SMS text message asks user to agree</h2>
+        <p>
+          After a missed call, the caller receives an SMS that <strong>explicitly asks them to agree to receive text messages</strong>. The user must reply <strong>YES</strong> to confirm SMS consent before ongoing texts are sent.
+        </p>
+
+        <div class="mockup-grid">
+          <div class="mockup-panel">
+            <div class="mockup-panel-header">First SMS — consent request (shown to user)</div>
+            <div class="mockup-panel-body">
+              <div class="phone-mock">
+                <div class="phone-screen">
+                  <div class="phone-header">Messages · FrontDesk Intelligence</div>
+                  <div class="sms-bubble">
+                    FrontDesk Intelligence: We missed your call. To receive SMS text messages from us about your inquiry (scheduling, questions, and follow-up), reply <strong>YES</strong>. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out. Reply HELP for help.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-panel">
+            <div class="mockup-panel-header">User reply — explicit SMS consent</div>
+            <div class="mockup-panel-body">
+              <div class="phone-mock">
+                <div class="phone-screen">
+                  <div class="phone-header">Messages</div>
+                  <div class="sms-bubble">
+                    FrontDesk Intelligence: We missed your call. To receive SMS text messages from us about your inquiry, reply YES. Msg &amp; data rates may apply. Reply STOP to opt out.
+                  </div>
+                  <div class="sms-bubble sms-bubble-user">YES</div>
+                  <div class="sms-bubble">
+                    Thanks! How can we help with scheduling or questions about your inquiry? Reply here to continue by SMS text message.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Full opt-in workflow (step by step)</h2>
         <ol class="opt-in-steps">
           <li>
-            <strong>Step 1 — Caller initiates contact.</strong>
-            The patient or prospective patient dials the clinic’s advertised phone number (shown on the clinic website, Google Business Profile, signage, or other published materials).
+            <strong>User sees SMS disclosure before contacting the clinic</strong> — on the clinic website contact page, contact form, or next to the published phone number (Touchpoint 1 or 2 above).
           </li>
           <li>
-            <strong>Step 2 — Call is not answered.</strong>
-            The call is not completed with clinic staff (for example: no answer, busy, or a short call that ends without a substantive conversation).
+            <strong>User calls the clinic OR submits the web form with the SMS checkbox checked</strong> — this is the user’s affirmative action to initiate contact and agree to SMS where applicable.
           </li>
           <li>
-            <strong>Step 3 — Clinic sends first SMS text message.</strong>
-            Within approximately 30 seconds, the caller receives an automated <strong>SMS text message</strong> at the <strong>same mobile number they called from</strong>, sent from the clinic’s dedicated toll-free or messaging number.
+            <strong>If the call is not answered, clinic sends consent-request SMS</strong> — an automated text to the calling number asking the user to reply YES to agree to receive SMS text messages (Touchpoint 3 above).
           </li>
           <li>
-            <strong>Step 4 — First SMS includes full SMS disclosure.</strong>
-            The first text message identifies the clinic by name, states that the clinic missed their call, explains that the message is an SMS follow-up, describes what types of texts they may receive, and includes STOP/HELP opt-out language plus “Msg &amp; data rates may apply.”
+            <strong>User replies YES</strong> — this is explicit consent to receive SMS text messages about their inquiry.
           </li>
           <li>
-            <strong>Step 5 — Ongoing SMS only with engagement.</strong>
-            Additional SMS text messages are sent only if the caller replies to that thread, clinic staff respond in the same thread, or a limited service reminder is sent for the same open inquiry. We do not send SMS to numbers that never called the clinic.
+            <strong>Ongoing SMS only after YES</strong> — scheduling texts, staff replies, and limited service reminders in the same thread. No SMS to numbers that never called or never replied YES.
+          </li>
+          <li>
+            <strong>User may opt out anytime</strong> — reply STOP, STOPALL, UNSUBSCRIBE, CANCEL, END, or QUIT.
           </li>
         </ol>
 
-        <h2>Exact SMS text shown to the user (first message)</h2>
-        <p>This is the sample first SMS text message sent after a missed call. This language is shown directly to the recipient — it is not buried in our Privacy Policy or Terms of Service.</p>
+        <h2>Exact sample messages for verification</h2>
 
-        <div class="sms-sample">
-          <span class="sms-sample-label">Sample first SMS text message</span>
-          Hi — we missed your call at [Clinic Name]. We would like to follow up by SMS text message to help with scheduling or questions about your inquiry. Reply here to continue by text. Msg &amp; data rates may apply. Reply STOP to opt out. Reply HELP for help.
+        <div class="sms-sample" style="margin-bottom:1rem;">
+          <span class="sms-sample-label">Message 1 — SMS consent request (first outbound text)</span>
+          FrontDesk Intelligence: We missed your call. To receive SMS text messages from us about your inquiry (scheduling, questions, and follow-up), reply YES. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out. Reply HELP for help.
         </div>
 
-        <h2>What SMS text messages you agree to receive</h2>
-        <p>When you opt in by calling a participating clinic, you consent to receive the following types of <strong>SMS text messages</strong> at the phone number you called from:</p>
+        <div class="sms-sample">
+          <span class="sms-sample-label">Message 2 — after user replies YES</span>
+          Thanks! How can we help with scheduling or questions about your inquiry? Reply here to continue by SMS text message.
+        </div>
+
+        <h2>What SMS text messages the user agrees to receive</h2>
         <ul>
-          <li><strong>Missed-call follow-up texts</strong> — an automated SMS sent shortly after your unanswered call</li>
-          <li><strong>Scheduling and service texts</strong> — messages to help book appointments or answer questions about the service you inquired about</li>
-          <li><strong>Staff reply texts</strong> — responses from clinic staff in the same SMS conversation thread</li>
-          <li><strong>Service reminder texts</strong> — limited follow-up reminders tied to your open inquiry (not marketing broadcasts)</li>
+          <li>Missed-call follow-up SMS text messages</li>
+          <li>Scheduling and appointment-related SMS text messages</li>
+          <li>Staff reply SMS text messages in the same conversation</li>
+          <li>Limited service reminder SMS text messages for the same inquiry (not marketing broadcasts)</li>
         </ul>
 
-        <h2>What SMS text messages you will NOT receive</h2>
+        <h2>What we do NOT send</h2>
         <ul>
-          <li>Marketing or promotional text blasts unrelated to your call</li>
-          <li>Messages to phone numbers that never called the clinic</li>
-          <li>Messages from purchased or third-party contact lists</li>
+          <li>Marketing or promotional SMS blasts to cold lists</li>
+          <li>SMS to phone numbers that never called or never replied YES</li>
+          <li>SMS from purchased or third-party contact lists</li>
         </ul>
 
-        <h2>Message frequency &amp; cost</h2>
-        <ul>
-          <li><strong>Frequency:</strong> Typically one initial automated SMS per missed call, plus replies in the same conversation. Service reminders, if sent, are limited to the open inquiry.</li>
-          <li><strong>Cost:</strong> Message and data rates may apply. Check with your mobile carrier.</li>
-          <li><strong>Opt-out:</strong> Reply <strong>STOP</strong>, <strong>STOPALL</strong>, <strong>UNSUBSCRIBE</strong>, <strong>CANCEL</strong>, <strong>END</strong>, or <strong>QUIT</strong> to stop receiving SMS messages.</li>
-          <li><strong>Help:</strong> Reply <strong>HELP</strong> for clinic contact information and opt-out instructions.</li>
-        </ul>
-
-        <h2>SMS consent is separate from Privacy Policy &amp; Terms</h2>
+        <h2>SMS consent is NOT collected via Privacy Policy or Terms</h2>
         <p>
-          Consent to receive SMS text messages is obtained through the call-initiated flow and first-message disclosure described above. It is <strong>not</strong> obtained by accepting our website Privacy Policy or Terms of Service. Those documents govern data handling and platform use — not SMS opt-in.
+          Agreement to receive SMS text messages is obtained only through the checkbox, pre-call disclosure, and YES reply flow documented on this page. Our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a> do not serve as SMS opt-in.
         </p>
 
-        <h2>One-sentence summary (for verification forms)</h2>
-        <p>
-          <em>By calling a participating clinic’s published phone number, callers consent to receive SMS text messages at the number they called from if the call is not answered; the first SMS identifies the clinic, explains the missed-call follow-up, states message types and rates, and includes STOP/HELP opt-out language.</em>
-        </p>
-
-        <h2>Questions about SMS opt-in</h2>
-        <p>
-          Reply <strong>HELP</strong> to any message, or contact FrontDesk Intelligence at
-          <a href="mailto:trevordowdle@gmail.com">trevordowdle@gmail.com</a>.
-        </p>
-
-        <h2>Related policies</h2>
+        <h2>URLs for toll-free verification submission</h2>
         <ul>
-          <li><a href="privacy.html">Privacy Policy</a> (data handling — separate from SMS consent)</li>
-          <li><a href="terms.html">Terms of Service</a> (platform terms — separate from SMS consent)</li>
-          <li><a href="contact.html">Contact information</a></li>
+          <li><strong>Opt-in workflow (this page):</strong> <a href="https://trevordowdle.github.io/frontdesk-intelligence-website/sms-opt-in.html">sms-opt-in.html</a></li>
+          <li><strong>Web form opt-in demo:</strong> <a href="https://trevordowdle.github.io/frontdesk-intelligence-website/sms-signup.html">sms-signup.html</a></li>
+          <li><strong>Pre-call disclosure example:</strong> <a href="https://trevordowdle.github.io/frontdesk-intelligence-website/contact.html">contact.html</a></li>
+          <li><strong>Privacy policy:</strong> <a href="https://trevordowdle.github.io/frontdesk-intelligence-website/privacy.html">privacy.html</a></li>
         </ul>
 
-        <p><small>Last updated: June 2026</small></p>
+        <h2>One-paragraph summary for Twilio message flow field</h2>
+        <p>
+          <em>End users opt in to SMS text messages from FrontDesk Intelligence in three ways: (1) checking an explicit SMS consent checkbox on a web contact form (<a href="sms-signup.html">demo</a>), (2) reading pre-call SMS disclosure next to the clinic phone number before calling (<a href="contact.html">example</a>), and (3) replying YES to a consent-request SMS after a missed call. All touchpoints include program name, message types, frequency disclosure, “Msg &amp; data rates may apply,” and STOP/HELP instructions. Ongoing SMS is sent only after YES reply. Full workflow: <a href="sms-opt-in.html">sms-opt-in.html</a>.</em>
+        </p>
+
+        <p><small>Last updated: June 9, 2026</small></p>
       </div>
     </section>
   </main>
@@ -153,7 +213,8 @@
           <h3>Company</h3>
           <ul>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="sms-opt-in.html">SMS Opt-In Methodology</a></li>
+            <li><a href="sms-signup.html">SMS Sign-Up Form</a></li>
+            <li><a href="sms-opt-in.html">SMS Opt-In</a></li>
           </ul>
         </div>
         <div>
