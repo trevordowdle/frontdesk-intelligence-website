@@ -17,8 +17,8 @@ Static website for **FrontDesk Intelligence**, built to satisfy Twilio toll-free
 Update these placeholders to match **exactly** what you submitted in Twilio Console:
 
 1. **Business legal name** — `contact.html`, footer
-2. **Email** — currently `trevordowdle@gmail.com` (use your real inbox)
-3. **Phone** — currently `(801) 895-2696` (your toll-free; confirm this is what you want public)
+2. **Email** — `contact@dowdleventures.com`
+3. **Phone** — `(833) 657-4305` (public toll-free)
 4. **Mailing address** — placeholder in `contact.html` and `privacy.html` (replace with registered business address)
 5. **Domain** — GitHub Pages URL or custom domain must match verification form
 
@@ -72,7 +72,7 @@ Use case category: **Customer care / account notifications** (transactional miss
 Sample message (from your compliance doc):
 
 ```text
-Hi — we missed your call at [Clinic Name]. Reply here and we'll help with scheduling or questions. Msg & data rates may apply. Reply STOP to opt out.
+Hi — we missed your call at [Clinic Name]. Reply here and we'll help with scheduling or questions. Msg & data rates may apply. Reply STOP to opt out. Reply HELP for help.
 ```
 
 ## Verification checklist
