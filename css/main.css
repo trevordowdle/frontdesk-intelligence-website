@@ -24,6 +24,32 @@
 
 html {
   scroll-behavior: smooth;
+  /* Firefox + Chrome 121+ */
+  scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+/* Styling the scrollbar opts Chromium out of auto-hiding overlay
+   scrollbars, so it stays visible. Colors match the classic browser
+   default greys. */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #787878;
 }
 
 body {

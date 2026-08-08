@@ -61,11 +61,11 @@ https://<your-github-username>.github.io/frontdesk-intelligence-website/
 
 ## URLs to submit in Twilio toll-free verification
 
-| Field | Example URL |
-|-------|-------------|
-| Website | `https://<username>.github.io/frontdesk-intelligence-website/` |
-| Privacy policy | `https://<username>.github.io/frontdesk-intelligence-website/privacy.html` |
-| Opt-in / consent | `https://<username>.github.io/frontdesk-intelligence-website/sms-opt-in.html` |
+| Field | URL |
+|-------|-----|
+| Website | `https://frontdesk.dowdleventures.com/` |
+| Privacy policy | `https://frontdesk.dowdleventures.com/privacy` |
+| Opt-in / consent | `https://frontdesk.dowdleventures.com/sms-opt-in` |
 
 Use case category: **Customer care / account notifications** (transactional missed-call follow-up, not marketing).
 
