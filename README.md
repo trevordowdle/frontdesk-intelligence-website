@@ -18,7 +18,7 @@ Update these placeholders to match **exactly** what you submitted in Twilio Cons
 
 1. **Business legal name** — `contact.html`, footer
 2. **Email** — `contact@dowdleventures.com`
-3. **Phone** — `(833) 657-4305` (public toll-free)
+3. **Phone** — `(801) 613-1060` (public support)
 4. **Mailing address** — placeholder in `contact.html` and `privacy.html` (replace with registered business address)
 5. **Domain** — GitHub Pages URL or custom domain must match verification form
 
