@@ -1,12 +1,15 @@
 :root {
-  --paper: #f6f2e9;
-  --paper-deep: #ede6d5;
-  --ink: #221d14;
-  --ink-soft: #6b6250;
-  --brand: #0d6e7a;
-  --brand-deep: #094c55;
+  /* Palette — anchored on the logo's two blues, Sanzo Wada style:
+     one ground (ivory), one ink (logo navy), one working accent
+     (logo blue), one signal (vermillion, reserved for the missed call). */
+  --paper: #f7f4eb;
+  --paper-deep: #edeadb;
+  --ink: #012052;
+  --ink-soft: #46557a;
+  --brand: #0162f0;
+  --brand-deep: #0b4fc0;
   --signal: #b4432c;
-  --rule: #d9d1bf;
+  --rule: #d8d3c3;
   --font-display: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-mono: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Consolas, Menlo, monospace;
@@ -49,7 +52,7 @@ a {
 }
 
 a:hover {
-  color: var(--signal);
+  color: var(--brand);
 }
 
 .container {
@@ -90,17 +93,10 @@ a:hover {
   color: var(--ink);
 }
 
-.logo-mark {
-  display: grid;
-  place-items: center;
-  width: 2rem;
-  height: 2rem;
-  background: var(--brand-deep);
-  color: var(--paper);
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+.logo-img {
+  height: 2.15rem;
+  width: auto;
+  display: block;
 }
 
 .site-nav {
@@ -127,7 +123,7 @@ a:hover {
 .site-nav a[aria-current="page"] {
   color: var(--ink);
   text-decoration: underline;
-  text-decoration-color: var(--signal);
+  text-decoration-color: var(--brand);
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
 }
@@ -200,7 +196,7 @@ a:hover {
   display: inline-block;
   width: 1.75rem;
   height: 2px;
-  background: var(--signal);
+  background: var(--brand);
   margin-right: 0.65rem;
   vertical-align: middle;
 }
@@ -219,9 +215,10 @@ h1 {
   font-size: clamp(2.3rem, 4.5vw, 3.4rem);
 }
 
+/* "lost revenue" gets the red ink — same ink as the missed call. */
 h1 em {
   font-style: italic;
-  color: var(--brand-deep);
+  color: var(--signal);
 }
 
 .hero p.lead {
@@ -395,7 +392,7 @@ section {
 
 .cta-band p {
   margin: 0;
-  color: #cfc6b2;
+  color: #bcc7de;
 }
 
 .cta-band .btn-primary {
@@ -561,9 +558,9 @@ section {
 .site-footer {
   margin-top: 1.5rem;
   background: var(--ink);
-  color: #cfc6b2;
+  color: #bcc7de;
   padding: 3rem 0 2rem;
-  border-top: 6px solid var(--brand-deep);
+  border-top: 6px solid var(--brand);
 }
 
 .footer-grid {
@@ -575,7 +572,7 @@ section {
 
 .footer-grid h3 {
   margin: 0 0 0.85rem;
-  color: #9a917c;
+  color: #8494b8;
   font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 700;
@@ -594,7 +591,7 @@ section {
 }
 
 .footer-grid a {
-  color: #cfc6b2;
+  color: #bcc7de;
   text-decoration: none;
 }
 
@@ -606,9 +603,9 @@ section {
 
 .footer-bottom {
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(246, 242, 233, 0.15);
+  border-top: 1px solid rgba(247, 244, 235, 0.18);
   font-size: 0.9rem;
-  color: #9a917c;
+  color: #8494b8;
 }
 
 .notice {
@@ -804,10 +801,10 @@ section {
 .opt-in-form-mock input[type="tel"] {
   width: 100%;
   padding: 0.65rem 0.75rem;
-  border: 1px solid #8f866f;
+  border: 1px solid #7d89a8;
   border-radius: 0;
   font: inherit;
-  background: #fffcf5;
+  background: #fdfbf5;
 }
 
 .checkbox-consent {
