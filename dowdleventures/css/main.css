@@ -390,6 +390,12 @@ h3 {
   margin: 0;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+}
+
 @media (max-width: 860px) {
   .intro,
   .what,
@@ -426,5 +432,161 @@ h3 {
 
   .contact-form {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Capability statement (capability-statement.html) */
+.cap-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding: 2.5rem 0 1.5rem;
+}
+
+.cap-title h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+}
+
+.cap-download {
+  margin: 0;
+  font-weight: 700;
+}
+
+.cap-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 2.5rem 3.5rem;
+  padding-bottom: 3rem;
+}
+
+.cap-main section + section {
+  margin-top: 1.75rem;
+}
+
+.cap-main h2,
+.cap-data h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.cap-main p {
+  margin: 0;
+}
+
+.cap-main ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.cap-main li + li {
+  margin-top: 0.35rem;
+}
+
+.cap-data {
+  align-self: start;
+  padding-left: 1.75rem;
+  border-left: 1px solid var(--rule);
+  font-size: 1rem;
+}
+
+.cap-data dl {
+  margin: 0;
+}
+
+.cap-data dl > div + div {
+  margin-top: 0.85rem;
+}
+
+.cap-data dt {
+  font-weight: 700;
+}
+
+.cap-data dd {
+  margin: 0;
+  color: var(--ink-soft);
+  overflow-wrap: anywhere;
+}
+
+.naics {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 860px) {
+  .cap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cap-data {
+    padding: 1.75rem 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--rule);
+  }
+}
+
+/* One US Letter page when printed or exported to PDF. */
+@media print {
+  @page {
+    size: letter;
+    margin: 0.55in 0.6in;
+  }
+
+  html {
+    scrollbar-color: auto;
+  }
+
+  body {
+    background: #fff;
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  .container {
+    width: auto;
+  }
+
+  .skip-link,
+  .cap-download,
+  .site-footer {
+    display: none;
+  }
+
+  .letterhead {
+    padding-top: 0;
+  }
+
+  .cap-title {
+    padding: 0.3in 0 0.2in;
+  }
+
+  .cap-title h1 {
+    font-size: 20pt;
+  }
+
+  .cap-grid {
+    grid-template-columns: 1.7fr 1fr;
+    gap: 0.4in;
+    padding-bottom: 0;
+  }
+
+  .cap-main h2,
+  .cap-data h2 {
+    font-size: 12pt;
+  }
+
+  /* The printed page is narrower than the 860px breakpoint; keep the side rule. */
+  .cap-data {
+    padding: 0 0 0 0.3in;
+    border-top: 0;
+    border-left: 1px solid var(--rule);
+    font-size: 9.5pt;
+  }
+
+  a {
+    text-decoration: none;
   }
 }
