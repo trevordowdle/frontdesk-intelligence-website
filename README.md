@@ -1,92 +1,73 @@
-# FrontDesk Intelligence — Marketing Site
+# Dowdle Ventures Company Site
 
-Static website for **FrontDesk Intelligence**, built to satisfy Twilio toll-free verification requirements (30489: website must be established and active).
+Static site for **Dowdle Ventures LLC**, published at [dowdleventures.com](https://dowdleventures.com) via GitHub Pages. Hand-written HTML, one stylesheet, no build step.
 
-## Pages
+## Editing copy
 
-| Page | URL path | Purpose |
-|------|----------|---------|
-| Home | `/` | Business overview, services, credibility |
-| Contact | `/contact.html` | Business name, email, phone, address |
-| SMS Opt-In | `/sms-opt-in.html` | Public opt-in methodology (required for verification) |
-| Privacy | `/privacy.html` | Privacy policy |
-| Terms | `/terms.html` | Terms of service |
+Main page copy lives in **`index.html`**, including the page title, meta description, Open Graph / Twitter text and the JSON-LD block in `<head>`. The capability statement's copy lives in **`capability-statement.html`**. `css/main.css` and `js/main.js` contain no visible text.
 
-## Before Twilio resubmission
+The site makes no accessibility or compliance claims (no "ADA compliant", "WCAG compliant" or "508 compliant"). Keep it that way unless a lawyer has reviewed the wording.
 
-Update these placeholders to match **exactly** what you submitted in Twilio Console:
+## Files
 
-1. **Business legal name** — `contact.html`, footer
-2. **Email** — `contact@dowdleventures.com`
-3. **Phone** — `(801) 613-1060` (public support)
-4. **Mailing address** — placeholder in `contact.html` and `privacy.html` (replace with registered business address)
-5. **Domain** — GitHub Pages URL or custom domain must match verification form
+| File | Purpose |
+|------|---------|
+| `index.html` | The main page and its copy |
+| `capability-statement.html` | One-page capability statement for government and nonprofit buyers; prints to one US Letter page |
+| `capability-statement.pdf` | PDF export of the capability statement (tagged, for screen readers) |
+| `css/main.css` | Styles; palette and fonts are tokens on `:root` |
+| `js/main.js` | Copyright year, copy-email button, contact form to email app |
+| `img/logo.png` | Header monogram: letters only on a transparent background, D recolored to the page green (192×132) |
+| `img/trevor.jpg`, `img/jakob.jpg` | Founder headshots, square crops at 240×240 (shown at 72px, so they stay sharp on high-res screens) |
+| `img/logo-mark-src.png` | Full-size version of the same transparent monogram, for re-sizing |
+| `img/logo-square.png` | Monogram padded to a square; the logo search engines see |
+| `favicon-32.png`, `apple-touch-icon.png` | Browser tab and home-screen icons |
+| `og-image.png` | 1200×630 social preview: the logo with title, centered |
+| `robots.txt`, `sitemap.xml` | Basic SEO |
 
-Twilio reviewers check that business details, privacy policy, and opt-in URL are consistent and publicly reachable over HTTPS.
+## Contact form
+
+The form opens the visitor's email app with a pre-filled message to `contact@dowdleventures.com` (the address comes from the form's `action`). Without JavaScript it falls back to a plain `mailto:` submit. To switch to a hosted form service later (Formspree, etc.), change the form's `action`/`method`/`enctype` and remove the submit handler in `js/main.js`.
 
 ## Local preview
 
 ```bash
-cd /Users/trevordowdle/Projects/frontdesk-intelligence-website
-python3 -m http.server 8080
+python serve.py 8080
 ```
 
 Open http://localhost:8080
 
-## Deploy to GitHub Pages
+## GitHub Pages
 
-### Option A — New repo (recommended)
+The site is published from the `main` branch. The custom domain is set in `CNAME` to `dowdleventures.com`.
+
+At your DNS provider, point the apex domain at GitHub Pages with `A` records:
+
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+Add `www` as a `CNAME` to `trevordowdle.github.io`. GitHub will redirect `www.dowdleventures.com` to `dowdleventures.com`. After DNS propagates, enable **Enforce HTTPS** in **Settings → Pages**.
+
+## Logo files
+
+All logo images are made from the two originals, `Logo.png` (monogram) and `LogoWithTitle.png`. Their background green `#0e3125` and gold `#bd9543` are the `--evergreen` and `--gold` tokens in `css/main.css`. The header monogram is the original with the green background removed and the cream D recolored to `#0e3125`, so it sits directly on the light page; the V keeps its original gold. If the logo changes, regenerate the files above from the new originals at the same sizes. A transparent or vector original would make the header version simpler and sharper. For the square icons and the social image, place the logo on a `#0e3125` background, and don't scale any image up.
+
+## Capability statement
+
+Placeholders for the UEI, CAGE code and a past performance section are HTML comments in `capability-statement.html`. Uncomment them once you've registered on SAM.gov and have client work you can cite. Confirm the NAICS codes match the ones you pick during registration.
+
+After any change, re-export the PDF with the preview server running (`python serve.py 8080`):
 
 ```bash
-cd /Users/trevordowdle/Projects/frontdesk-intelligence-website
-git init
-git add .
-git commit -m "Add FrontDesk Intelligence marketing site for Twilio verification"
-gh repo create frontdesk-intelligence-website --public --source=. --push
+chrome --headless=new --no-pdf-header-footer --generate-pdf-document-outline   --virtual-time-budget=8000 --print-to-pdf=capability-statement.pdf http://localhost:8080/capability-statement
 ```
 
-Then in GitHub: **Settings → Pages → Build and deployment → Source: Deploy from branch → Branch: `main` / `/ (root)`**.
+Chrome tags the PDF for screen readers. Check that it is still one page.
 
-Your site will be live at:
+## Accessibility checks
 
-```text
-https://<your-github-username>.github.io/frontdesk-intelligence-website/
-```
-
-### Option B — Custom domain (optional, stronger for verification)
-
-1. Add a `CNAME` file with your domain (e.g. `www.frontdeskintelligence.com`)
-2. Configure DNS `CNAME` → `<username>.github.io`
-3. Enable HTTPS in GitHub Pages settings
-
-## URLs to submit in Twilio toll-free verification
-
-| Field | URL |
-|-------|-----|
-| Website | `https://frontdesk.dowdleventures.com/` |
-| Privacy policy | `https://frontdesk.dowdleventures.com/privacy` |
-| Opt-in / consent | `https://frontdesk.dowdleventures.com/sms-opt-in` |
-
-Use case category: **Customer care / account notifications** (transactional missed-call follow-up, not marketing).
-
-Sample message (from your compliance doc):
-
-```text
-Hi — we missed your call at [Clinic Name]. Reply here and we'll help with scheduling or questions. Msg & data rates may apply. Reply STOP to opt out. Reply HELP for help.
-```
-
-## Verification checklist
-
-- [ ] Site loads in incognito browser over HTTPS
-- [ ] Contact page has real email, phone, and address
-- [ ] Privacy and Terms links work from footer
-- [ ] SMS opt-in page describes call-initiated consent
-- [ ] Business name matches Twilio Trust Hub / verification form
-- [ ] No "under construction" or placeholder-only pages
-
-## Related repo docs
-
-Content is aligned with:
-
-- `ai-frontdesk-intelligence/docs/compliance/sms-opt-in-methodology.md`
-- `ai-frontdesk-intelligence/docs/essence/SalesPositioning.md`
+Before publishing changes, run Lighthouse (Chrome DevTools > Lighthouse > Accessibility) on both pages. Also tab through each page with the keyboard and check that every link and field shows a focus outline. As of 2026-10-20, both pages score 100, and every color pair meets WCAG 2.2 AA contrast.

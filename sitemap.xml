@@ -1,28 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://frontdesk.dowdleventures.com/</loc>
-    <lastmod>2026-08-08</lastmod>
+    <loc>https://dowdleventures.com/</loc>
+    <lastmod>2026-10-20</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://frontdesk.dowdleventures.com/contact</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://frontdesk.dowdleventures.com/sms-opt-in</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://frontdesk.dowdleventures.com/privacy</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://frontdesk.dowdleventures.com/terms</loc>
-    <lastmod>2026-08-08</lastmod>
-    <priority>0.3</priority>
+    <loc>https://dowdleventures.com/capability-statement</loc>
+    <lastmod>2026-10-20</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>
