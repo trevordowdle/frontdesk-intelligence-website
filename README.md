@@ -18,7 +18,7 @@ The site makes no accessibility or compliance claims (no "ADA compliant", "WCAG 
 | `css/main.css` | Styles; palette and fonts are tokens on `:root` |
 | `js/main.js` | Copyright year, copy-email button, contact form to email app |
 | `img/logo.png` | Header monogram: letters only on a transparent background, D recolored to the page green (192×132) |
-| `img/trevor.jpg`, `img/jakob.jpg` | Founder headshots, square crops at 240×240 (shown at 72px, so they stay sharp on high-res screens) |
+| `img/robert.jpg`, `img/jakob.jpg` | Founder headshots, square crops at 240×240 (shown at 72px, so they stay sharp on high-res screens) |
 | `img/logo-mark-src.png` | Full-size version of the same transparent monogram, for re-sizing |
 | `img/logo-square.png` | Monogram padded to a square; the logo search engines see |
 | `favicon-32.png`, `apple-touch-icon.png` | Browser tab and home-screen icons |
